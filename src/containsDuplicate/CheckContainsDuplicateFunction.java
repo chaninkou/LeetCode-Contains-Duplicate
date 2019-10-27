@@ -4,16 +4,22 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class CheckContainsDuplicateFunction {
+	// O(n) solution
 	public boolean containsDuplicate(int[] nums) {
-		Set<Integer> distinctSet = new HashSet<>();
-
-		for (int num : nums) {
-			if (distinctSet.contains(num)) {
+		// Use a set to store all the distinct elements
+		Set<Integer> set = new HashSet<>();
+		
+		for(int current : nums){
+			// If it contains it, return true right away
+			if(set.contains(current)){
 				return true;
 			}
-			distinctSet.add(num);
+			
+			// If it doesn't contain it, add it to hashset
+			set.add(current);
 		}
-
+		
+		// Return false if it does not contain duplicates
 		return false;
 	}
 
