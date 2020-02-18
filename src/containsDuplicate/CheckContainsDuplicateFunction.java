@@ -39,18 +39,18 @@ public class CheckContainsDuplicateFunction {
 	}
 
 	// Nlogn solution since it needs to be sorted to work
-//	public boolean containsDuplicate(int[] nums){
-//		// Sort the array
-//		Arrays.sort(nums);
-//		
-//		// Compare current with previous, that way we know if there is duplicates
-//		for(int i = 1; i < nums.length; i++){
-//			if(nums[i] == nums[i - 1]){
-//				return true;
-//			}
-//		}
-//		
-//		// return false if we dont find duplicates
-//		return false;
-//	}
+	public boolean containsDuplicate2(int[] nums){
+		// Sort the array
+		Arrays.sort(nums);
+		
+		// Compare current with previous, that way we know if there is duplicates
+		for(int i = 1; i < nums.length; i++){
+			if(nums[i] == nums[i - 1]){
+				return true;
+			}
+		}
+		
+		// return false if we dont find duplicates
+		return false;
+	}
 }
